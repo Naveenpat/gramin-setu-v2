@@ -1,0 +1,61 @@
+# ---------------------------------------
+# Root level
+# ---------------------------------------
+node_modules/
+**/node_modules/
+
+# Environment files (all folders)
+.env
+*.env
+**/*.env
+
+# Logs (all folders)
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# ---------------------------------------
+# FRONTEND (Vite Project)
+# ---------------------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.DS_Store
+
+# Vite local cache
+frontend/.vite/deps/
+frontend/*.local
+
+
+# ---------------------------------------
+# ADMIN (React Project)
+# ---------------------------------------
+admin/node_modules/
+admin/build/
+admin/.DS_Store
+
+
+# ---------------------------------------
+# BACKEND (Node.js Project)
+# ---------------------------------------
+backend/node_modules/
+backend/build/
+backend/dist/
+backend/uploads/
+backend/.DS_Store
+
+# PM2 logs
+backend/.pm2/
+backend/logs/

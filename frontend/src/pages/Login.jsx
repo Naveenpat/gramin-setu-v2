@@ -18,7 +18,7 @@ function Login() {
       return
     }
 
-    // Demo purpose: direct login without backend
+    // ⚠️ Demo purpose: direct login without backend
     login({
       name: 'Demo Kisan',
       identifier,
@@ -26,25 +26,18 @@ function Login() {
     navigate('/')
   }
 
-  const handleCreateAccount = () => {
-    alert('यह demo UI है – यहाँ आप बाद में signup page या flow जोड़ सकते हैं।')
-  }
-
-  const handleForgotPassword = () => {
-    alert('यह demo UI है – यहाँ आप बाद में forgot password flow जोड़ सकते हैं।')
-  }
-
   return (
     <div className="page page-auth">
       <div className="auth-card">
-        <h2>Login</h2>
+        <h2>लॉगिन</h2>
         <p className="auth-subtitle">
-          मोबाइल नंबर या ईमेल से लॉगिन करें। आगे चलकर आप इसे backend से connect कर सकते हैं।
+          GraminSetu पर अपने अकाउंट से लॉगिन करें। (यह अभी demo UI है, आगे चलकर
+          backend से जुड़ सकता है।)
         </p>
 
         <form onSubmit={handleSubmit} className="auth-form">
           <label className="field">
-            <span className="field-label">मोबाइल या ईमेल</span>
+            <span className="field-label">मोबाइल नंबर या ईमेल</span>
             <input
               type="text"
               value={identifier}
@@ -68,15 +61,23 @@ function Login() {
           {error && <div className="auth-error">{error}</div>}
 
           <button type="submit" className="btn btn-primary full">
-            Login
+            लॉगिन करें
           </button>
         </form>
 
         <div className="auth-links">
-          <button type="button" onClick={handleForgotPassword} className="link-button">
+          <button
+            type="button"
+            onClick={() => navigate('/forgot-password')}
+            className="link-button"
+          >
             पासवर्ड भूल गए?
           </button>
-          <button type="button" onClick={handleCreateAccount} className="link-button">
+          <button
+            type="button"
+            onClick={() => navigate('/register')}
+            className="link-button"
+          >
             नया अकाउंट बनाएँ
           </button>
         </div>

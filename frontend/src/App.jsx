@@ -8,6 +8,11 @@ import Labour from './pages/Labour.jsx'
 import Schemes from './pages/Schemes.jsx'
 import KnowledgeHub from './pages/KnowledgeHub.jsx'
 import Login from './pages/Login.jsx'
+import Community from './pages/Community.jsx'
+import ForgotPassword from './pages/ForgotPassword.jsx'
+import Register from './pages/Register.jsx'
+import Cart from './pages/Cart.jsx'
+import Checkout from './pages/Cart.jsx'
 
 function App() {
   return (
@@ -22,6 +27,11 @@ function App() {
           <Route path="/schemes" element={<Schemes />} />
           <Route path="/knowledge" element={<KnowledgeHub />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </main>
       <footer className="app-footer">
